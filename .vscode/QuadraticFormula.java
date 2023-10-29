@@ -25,6 +25,8 @@ public class QuadraticFormula{
           System.out.println("x = " + solution1);
         }else if(numer1 == 0){
           System.out.println("x = 0");
+        }else if(solution1 == solution2 * -1){
+          System.out.println("x = +-" + solution1);
         }else{
           System.out.println("x = " + solution1);
           System.out.println("x = " + solution2);
