@@ -7,8 +7,8 @@ public class RadicalTests{
       double underRad = input.nextDouble();
       // Calculations:
       // This tries to find the largest factor of underRad
-      double underRadTry =  0;
-      double Coef = 0;
+      int underRadTry =  0;
+      int Coef = 0;
       double underRadNoveau = 0;
 
       while (underRadTry * underRadTry <= underRad) {
@@ -18,7 +18,7 @@ public class RadicalTests{
         underRadTry++;
         underRadNoveau = underRad / (Coef * Coef);
         System.out.println("underRadWorks: " + Coef + "; Trial: " + underRadTry + "; underRadNoveau: " + underRadNoveau);
-      } 
+      }
         System.out.println("");
         System.out.println("x = +- " + Coef + "sqrt(" + underRadNoveau + ")");
     }
