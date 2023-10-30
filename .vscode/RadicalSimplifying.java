@@ -16,7 +16,13 @@ public class RadicalSimplifying{
       }
         underRadTry -= 1;
         underRad %= underRadTry;
+
+        System.out.println(underRad);
+        
         double radCoef = Math.sqrt(underRadTry);
+
+        System.out.println(radCoef);
+
         System.out.println("x = " + left + " +- " + radCoef + "sqrt(" + underRad + ")");
 
 
