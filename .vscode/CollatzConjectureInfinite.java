@@ -5,8 +5,7 @@ public class CollatzConjectureInfinite{
             int num = 1;
             while(num != 0){
             num = numInit;
-            int counter = 1;
-            System.out.println(counter + ": " + num);
+            System.out.println(numInit + ": " + num);
 
             while(num != 1){
                 if(num % 2 == 0){
@@ -14,11 +13,8 @@ public class CollatzConjectureInfinite{
                 } else {
                     num = num * 3 + 1;
                 }
-                System.out.println(counter + ": " + num);
-                counter++;
-                numInit++;
+                System.out.println(numInit + ": " + num);
             }
-                counter++;
                 numInit++;
         }
     }
