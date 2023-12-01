@@ -4,12 +4,12 @@ public class BinaryShenanigans {
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("Input a decimal");
             int decimal = input.nextInt();
-            System.out.println("Input the amount of bits");
-            int bits = input.nextInt();
-            System.out.println(DecToBi(decimal,bits));
+            System.out.println(DecToBi(decimal));
         }
     }
-    public static String DecToBi(int decimal, int bits){
+    public static String DecToBi(int decimal){
+        int bits;
+        for(bits = 1; decimal + 1 > Math.pow(2,bits);bits++){}
         String binary = "0".repeat(bits);
         int ogBinaryLength = binary.length();
         for(int i = 1; i <= decimal; i++) {
@@ -22,7 +22,7 @@ public class BinaryShenanigans {
                 }else if(pos == ogBinaryLength - 1 && wasChanged == 0){
                     binary = binary.substring(0,pos) + "1";
                 }
-            }
+            }System.out.println(binary);
         }return binary;
     }
 }
