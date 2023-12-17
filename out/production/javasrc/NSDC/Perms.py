@@ -1,6 +1,6 @@
 import pandas
 
-filePerms = pandas.read-csv('file_permits.csv')
+filePerms = pandas.read_csv('file_permits.csv')
 
 print(filePerms.head())
 print(filePerms.shape)
