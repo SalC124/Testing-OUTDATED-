@@ -31,6 +31,19 @@ public class QuadraticFormula{
           System.out.println("x = " + solution1);
           System.out.println("x = " + solution2);
         }
+        int underRadTry = 0;
+        int Coef = 0;
+        double underRadNoveau = 0;
+
+        while (underRadTry * underRadTry <= underRad) {
+          if (underRad % (underRadTry * underRadTry) == 0) {
+            Coef = underRadTry;
+          }
+          underRadTry++;
+          underRadNoveau = underRad / (Coef * Coef);
+        }
+        System.out.println("Solutions (Unsimplified):");
+        System.out.println("x = +- (" + (-1 * b) + " +- " + Coef + "sqrt(" + underRadNoveau + ")) / " + (2 * a));
       }else{
         double sqrted = Math.sqrt(underRad * -1);
         System.out.println("Solutions (Non-Real):");
