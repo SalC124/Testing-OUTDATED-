@@ -43,18 +43,30 @@ public class QuadraticFormula{
           underRadNoveau = underRad / (Coef * Coef);
         }
         System.out.println("Solutions (Unsimplified):");
-        System.out.println("x = +- (" + (-1 * b) + " +- " + Coef + "sqrt(" + underRadNoveau + ")) / " + (2 * a));
+        System.out.println("x = " + (-1 * b) + "/" + (2 * a) + " +- ()" + Coef + "sqrt(" + underRadNoveau + ")) / " + (2 * a));
       }else{
         double sqrted = Math.sqrt(underRad * -1);
         System.out.println("Solutions (Non-Real):");
         // Solution i:
-        double left = (-1 * b) / (2 * a);
+        double left = (-1 * b);
         double right = sqrted / (2 * a);
         String solution1 = (left + " +- " + right + "i");
         System.out.println("x = " + solution1);
         // Solution with radical still:
+        
+        int underRadTry = 0;
+        int Coef = 0;
+        double underRadNoveau = 0;
+        underRad = underRad * -1;
+        while (underRadTry * underRadTry <= underRad) {
+          if (underRad % (underRadTry * underRadTry) == 0) {
+            Coef = underRadTry;
+          }
+          underRadTry++;
+          underRadNoveau = underRad / (Coef * Coef);
+        }
         System.out.println("Solutions (Unsimplified):");
-        System.out.println("x = " + left + " +- sqrt(" + underRad + ") / " + (2 * a));
+        System.out.println("x = " + left + "/" + (2 * a) + " +- (" + Coef + " sqrt(" + (underRadNoveau * -1) + ")) / " + (2 * a));
       }
     }    
   }
